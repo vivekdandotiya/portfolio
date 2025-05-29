@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek's - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'slide-down': 'slideDown 0.8s ease-out',
+                        'slide-left': 'slideLeft 0.8s ease-out',
+                        'slide-right': 'slideRight 0.8s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'word-delay-1': 'fadeIn 0.5s ease-in-out 0.1s forwards',
+                        'word-delay-2': 'fadeIn 0.5s ease-in-out 0.2s forwards',
+                        'word-delay-3': 'fadeIn 0.5s ease-in-out 0.3s forwards',
+                        'word-delay-4': 'fadeIn 0.5s ease-in-out 0.4s forwards',
+                        'word-delay-5': 'fadeIn 0.5s ease-in-out 0.5s forwards',
+                        'word-delay-6': 'fadeIn 0.5s ease-in-out 0.6s forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideRight: {
+                            '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #1e293b, #0f172a, #1e40af, #1e293b);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .word {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-3xl font-bold text-gradient animate-fade-in ">Vivek Dandotiya</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section - Modified version -->
+<section id="home" class="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div class="absolute top-40 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between z-10">
+        <!-- Text Content -->
+        <div class="text-center md:text-left mb-12 md:mb-0 md:w-1/2 animate-slide-right">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                <span class="word animate-word-delay-1 inline-block">Web</span>
+                <span class="word animate-word-delay-2 inline-block"></span>
+                <br>
+                <span class="word animate-word-delay-3 inline-block">Developer</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8">
+                <span class="word animate-word-delay-4 inline-block">Creating</span>
+                <span class="word animate-word-delay-5 inline-block">beautiful,</span>
+                <span class="word animate-word-delay-6 inline-block">functional</span>
+                <span class="word animate-word-delay-6 inline-block">experiences</span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in" style="animation-delay: 0.8s;">
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    View My Work
+                </a>
+                <a href="#contact" class="border-2 border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+        
+        <!-- Profile Photo -->
+        <div class="md:w-1/2 flex justify-center animate-slide-left">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                <!-- Outer gradient ring -->
+                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 p-1 animate-spin-slow">
+                    <div class="h-full w-full rounded-full bg-slate-900"></div>
+                </div>
+                <!-- Actual photo -->
+                <div class="absolute inset-2 rounded-full overflow-hidden border-4 border-slate-800">
+                    <img src="photo.jpeg" 
+                         alt="Alex Johnson" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-4 animate-slide-up">About Me</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="animate-slide-right">
+        <div class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center animate-pulse-slow">
+            <div class="w-56 h-56 bg-slate-800 rounded-full overflow-hidden flex items-center justify-center">
+                <!-- Your Photo -->
+                <img src="wat.jpeg" alt="My Photo" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+
+
+                
+                <div class="animate-slide-left">
+                    <h3 class="text-3xl font-bold mb-6 text-white">
+                        <span class="word animate-word-delay-1 inline-block">Hi,</span>
+                        <span class="word animate-word-delay-2 inline-block">I'm</span>
+                        <span class="word animate-word-delay-3 inline-block">Vivek</span>
+                    </h3>
+                    <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                        <span class="word animate-word-delay-4 inline-block">I'm</span>
+                        <span class="word animate-word-delay-5 inline-block">a</span>
+                        <span class="word animate-word-delay-6 inline-block">passionate</span>
+                        <span class="word animate-word-delay-6 inline-block">web</span>
+                        <span class="word animate-word-delay-6 inline-block">developer</span>
+                        <span class="word animate-word-delay-6 inline-block">,</span>
+                        <span class="word animate-word-delay-6 inline-block"> i am currently studing at lovely professinal university </span>
+                        <span class="word animate-word-delay-6 inline-block"> in 3 year</span>
+                        <span class="word animate-word-delay-6 inline-block"></span>
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-slate-700/50 rounded-lg card-hover">
+                            <div class="text-3xl font-bold text-blue-400 mb-2">5+</div>
+                            <div class="text-slate-300">Projects</div>
+                        </div>
+                        <!-- <div class="text-center p-4 bg-slate-700/50 rounded-lg card-hover">
+                            <div class="text-3xl font-bold text-purple-400 mb-2"></div>
+                            <div class="text-slate-300">Years</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+<section id="skills" class="py-20 bg-slate-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-4 animate-slide-up">Skills</h2>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+      <div class="p-4 bg-slate-800/50 rounded-lg card-hover animate-slide-up">HTML</div>
+      <div class="p-4 bg-slate-800/50 rounded-lg card-hover animate-slide-up">CSS</div>
+      <div class="p-4 bg-slate-800/50 rounded-lg card-hover animate-slide-up">JavaScript</div>
+      <div class="p-4 bg-slate-800/50 rounded-lg card-hover animate-slide-up">Tailwind CSS</div>
+      <div class="p-4 bg-slate-800/50 rounded-lg card-hover animate-slide-up">React</div>
+      <div class="p-4 bg-slate-800/50 rounded-lg card-hover animate-slide-up">Node.js</div>
+      <div class="p-4 bg-slate-800/50 rounded-lg card-hover animate-slide-up">PHP</div>
+      <div class="p-4 bg-slate-800/50 rounded-lg card-hover animate-slide-up">MySQL</div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-4 animate-slide-up">Projects</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate-800/50 rounded-xl overflow-hidden card-hover animate-slide-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-white">E-Commerce</h3>
+                        <p class="text-slate-300 mb-4">Full-stack e-commerce solution with React, Node.js, and MongoDB.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-slate-800/50 rounded-xl overflow-hidden card-hover animate-slide-up" style="animation-delay: 0.4s;">
+    <!-- Project Image -->
+    <div class="h-48 overflow-hidden">
+        <img src="cf.jpg" alt="Task App Screenshot" class="w-full h-full object-cover">
+    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-white">ChatBot</h3>
+                        <p class="text-slate-300 mb-4">Analytics chatbot with js visualization.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Api's</span>
+                            <span class="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-slate-800/50 rounded-xl overflow-hidden card-hover animate-slide-up" style="animation-delay: 0.4s;">
+    <!-- Project Image -->
+    <div class="h-48 overflow-hidden">
+        <img src="df.jpg" alt="Task App Screenshot" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Project Details -->
+    <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-white">Task App</h3>
+        <p class="text-slate-300 mb-4">Collaborative task management with real-time updates.</p>
+
+        <!-- Skills Section -->
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">HTML</span>
+            <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">TailwindCSS</span>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-4 animate-slide-up">Contact</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="animate-slide-right">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Let's Connect</h3>
+                    <p class="text-lg text-slate-300 mb-8">
+                        <span class="word animate-word-delay-1 inline-block">I'm</span>
+                        <span class="word animate-word-delay-2 inline-block">always</span>
+                        <span class="word animate-word-delay-3 inline-block">interested</span>
+                        <span class="word animate-word-delay-4 inline-block">in</span>
+                        <span class="word animate-word-delay-5 inline-block">new</span>
+                        <span class="word animate-word-delay-6 inline-block">opportunities.</span>
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold">Email</div>
+                                <div class="text-slate-300">vivekdandotiya772@gmail.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold">LinkedIn</div>
+                                <div class="text-slate-300">https://www.linkedin.com/in/vivek-dandotiya-19b7982a2/</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slide-left">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300" placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 resize-none" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-6 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-slate-400">© 2024 vivek dandotiya . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form handling only
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Form validation
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Here you would normally send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
