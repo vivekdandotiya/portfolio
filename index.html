@@ -91,79 +91,83 @@
 </head>
 <body class="bg-slate-900 text-white overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-3xl font-bold text-gradient animate-fade-in ">Vivek Dandotiya</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
-                    <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-                    <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-700/50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 animate-slideInLeft">
+                <div class="relative">
+                    <svg class="w-10 h-10 animate-rotate-slow" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="url(#gradient)" stroke-width="2" fill="none"/>
+                        <path d="M12 15 L20 25 L28 15" stroke="url(#gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                <stop offset="100%" style="stop-color:#06b6d4"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="absolute inset-0 animate-pulse-glow rounded-full"></div>
                 </div>
+                <span class="text-2xl font-bold text-gradient">Vivek Dandotiya</span>
+            </div>
+            <div class="hidden md:flex space-x-8 animate-slideInRight">
+                <a href="#home" class="hover:text-blue-400 transition-all duration-300 hover:scale-110">Home</a>
+                <a href="#about" class="hover:text-blue-400 transition-all duration-300 hover:scale-110">About</a>
+                <a href="#projects" class="hover:text-blue-400 transition-all duration-300 hover:scale-110">Projects</a>
+                <a href="#contact" class="hover:text-blue-400 transition-all duration-300 hover:scale-110">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <!-- Hero Section - Modified version -->
-<section id="home" class="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
-        <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
-        <div class="absolute top-40 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 1s;"></div>
-        <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 2s;"></div>
-    </div>
-    
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between z-10">
-        <!-- Text Content -->
-        <div class="text-center md:text-left mb-12 md:mb-0 md:w-1/2 animate-slide-right">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                <span class="word animate-word-delay-1 inline-block">Web</span>
-                <span class="word animate-word-delay-2 inline-block"></span>
-                <br>
-                <span class="word animate-word-delay-3 inline-block">Developer</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-slate-300 mb-8">
-                <span class="word animate-word-delay-4 inline-block">Creating</span>
-                <span class="word animate-word-delay-5 inline-block">beautiful,</span>
-                <span class="word animate-word-delay-6 inline-block">functional</span>
-                <span class="word animate-word-delay-6 inline-block">experiences</span>
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in" style="animation-delay: 0.8s;">
-                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                    View My Work
-                </a>
-                <a href="#contact" class="border-2 border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
-                    Get In Touch
-                </a>
+   <section id="home" class="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+            <div class="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center z-10">
+            <div class="text-center md:text-left">
+                <div class="animate-fadeInUp">
+                    <h1 class="text-6xl md:text-8xl font-bold mb-6">
+                        <span class="typing-text inline-block">Web</span><br>
+                        <span class="text-gradient animate-wiggle inline-block" style="animation-delay: 3.5s;">Developer</span>
+                    </h1>
+                </div>
+                <p class="text-xl text-slate-300 mb-8 animate-fadeInUp" style="animation-delay: 4s;">
+                    Creating beautiful, functional digital experiences
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 animate-fadeInUp" style="animation-delay: 4.5s;">
+                    <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-semibold transition-all hover:scale-110 animate-glow group">
+                        <span class="group-hover:animate-bounce inline-block">View My Work</span>
+                    </a>
+                    <a href="#contact" class="border-2 border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full font-semibold transition-all hover:scale-110 hover:rotate-2">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center animate-slideInRight">
+                <div class="relative w-80 h-80">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 p-1 animate-spin">
+                        <div class="h-full w-full rounded-full bg-slate-900"></div>
+                    </div>
+                    <div class="absolute inset-4 rounded-full overflow-hidden animate-pulse-glow">
+                        <img src="photo.jpeg" alt="Vivek Dandotiya" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
             </div>
         </div>
         
-        <!-- Profile Photo -->
-        <div class="md:w-1/2 flex justify-center animate-slide-left">
-            <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                <!-- Outer gradient ring -->
-                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 p-1 animate-spin-slow">
-                    <div class="h-full w-full rounded-full bg-slate-900"></div>
-                </div>
-                <!-- Actual photo -->
-                <div class="absolute inset-2 rounded-full overflow-hidden border-4 border-slate-800">
-                    <img src="photo.jpeg" 
-                         alt="Alex Johnson" 
-                         class="w-full h-full object-cover">
-                </div>
-            </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
         </div>
-    </div>
-    
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-    </div>
-</section>
-
-    <!-- About Section -->
+    </section>
+       <!-- About Section -->
     <section id="about" class="py-20 bg-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -197,7 +201,9 @@
                         <span class="word animate-word-delay-6 inline-block">,</span>
                         <span class="word animate-word-delay-6 inline-block"> i am currently studing at lovely professinal university </span>
                         <span class="word animate-word-delay-6 inline-block"> in 3 year</span>
-                        <span class="word animate-word-delay-6 inline-block"></span>
+                        <span class="word animate-word-delay-6 inline-block">,</span>
+                        <span class="word animate-word-delay-6 inline-block"> I love creating digital experiences that combine beautiful design with functional code. </span>
+
                     </p>
                     
                     <div class="grid grid-cols-2 gap-6">
